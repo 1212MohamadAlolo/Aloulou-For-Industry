@@ -1,6 +1,6 @@
 {
-  "name": "علولو للصناعة",
-  "short_name": "علولو",
+  "name": "Aloulou for Industry | علولو للصناعة",
+  "short_name": "Aloulou",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./index.html#products",
@@ -20,7 +20,7 @@
     }
   ],
   "id": "./",
-  "description": "كتالوج علولو للصناعة للمنتجات والحلول الكهربائية والصناعية.",
+  "description": "Electrical and industrial products and solutions | منتجات وحلول كهربائية وصناعية",
   "scope": "./",
   "orientation": "portrait-primary",
   "categories": [
