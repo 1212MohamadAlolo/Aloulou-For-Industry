@@ -11,13 +11,13 @@
   const productName = document.querySelector('#productRoot h1')?.textContent?.trim();
   if (productName) {
     if (promptTitle) promptTitle.textContent = 'تحتاج مساعدة بهذا المنتج؟';
-    if (promptText) promptText.textContent = `اسأل فخر الدين عن ${productName}`;
+    if (promptText) promptText.textContent = `اسأل قسم المبيعات عن ${productName}`;
   }
 
   const message = productName
-    ? `مرحبًا أستاذ فخر الدين، أريد الاستفسار عن المنتج: ${productName}`
-    : 'مرحبًا أستاذ فخر الدين، أحتاج مساعدة باختيار المنتج المناسب من منتجات علولو للصناعة.';
-  link.href = `https://wa.me/963966248480?text=${encodeURIComponent(message)}`;
+    ? `مرحبًا قسم المبيعات، أريد الاستفسار عن المنتج: ${productName}`
+    : 'مرحبًا قسم المبيعات، أحتاج مساعدة باختيار المنتج المناسب من منتجات علولو للصناعة.';
+  link.href = `https://api.whatsapp.com/send?phone=963966248480&text=${encodeURIComponent(message)}`;
 
   let hidden = false;
   const hidePrompt = () => {
@@ -39,6 +39,8 @@
   }
 
   close?.addEventListener('click', hidePrompt);
+  link.removeAttribute('target');
+  link.removeAttribute('rel');
   link.addEventListener('click', hidePrompt);
 
   if (contactSection && 'IntersectionObserver' in window) {
