@@ -277,3 +277,515 @@ window.ALOULOU_PRODUCTS = [
     specs: [["قطر الرأس", "40 mm"], ["اللون", "أحمر"], ["آلية التحرير", "لف"], ["التلامسات", "1NC"], ["التركيب", "Panel Mount"]]
   }
 ];
+
+// Complete English product content for the bilingual interface.
+Object.entries({
+  "voltage-doubler": {
+    "categoryLabelEn": "Power & Supply",
+    "brandEn": "Aloulou for Industry",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Three product images prepared at 1180×1000 px and optimized for the web.",
+    "shortEn": "An Aloulou for Industry voltage doubler with digital voltage and current displays.",
+    "descriptionEn": "A voltage doubler manufactured by Aloulou for Industry, housed in an enclosed industrial casing with clearly identified input and output terminals and a visible 220 V input. Its digital interface displays voltage and current readings for electrical systems that require voltage multiplication with operating-value monitoring.",
+    "specsEn": [
+      [
+        "Product type",
+        "Voltage doubler"
+      ],
+      [
+        "Visible input voltage",
+        "220 V"
+      ],
+      [
+        "Display indicators",
+        "Voltage V and current A"
+      ],
+      [
+        "Connection terminals",
+        "Input and output"
+      ],
+      [
+        "Brand",
+        "Aloulou for Industry"
+      ],
+      [
+        "Model",
+        "Not specified"
+      ]
+    ],
+    "usagesEn": [
+      "Voltage-doubling applications",
+      "Electrical systems and control panels",
+      "Monitoring voltage and current during operation"
+    ],
+    "disclaimerEn": "The information is based only on the data supplied by the user and visible on the product. Confirm the output voltage, operating current, and final wiring method from the manufacturing diagram before use."
+  },
+  "elevator-revision-box": {
+    "categoryLabelEn": "Electrical Panels",
+    "brandEn": "Aloulou for Industry",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Three product presentation images prepared at 1180×1000 px and optimized for the web.",
+    "shortEn": "Elevator revision box with gong, alarm, battery charger, automatic charge cut-off, timed emergency lamp, and internal lighting.",
+    "descriptionEn": "A revision box designed for elevator systems, equipped with a gong, alarm, battery charger with automatic charge cut-off, a timed emergency lamp, and internal lighting. It supports inspection, operation, and service work with a clear control interface and a practical enclosure.",
+    "specsEn": [
+      [
+        "Product type",
+        "Elevator revision box"
+      ],
+      [
+        "Gong and alarm",
+        "Included"
+      ],
+      [
+        "Battery charger",
+        "Included"
+      ],
+      [
+        "Charge cut-off",
+        "Automatic"
+      ],
+      [
+        "Emergency lamp",
+        "Timed"
+      ],
+      [
+        "Internal lighting",
+        "Included"
+      ],
+      [
+        "Brand",
+        "Aloulou for Industry"
+      ]
+    ],
+    "usagesEn": [
+      "Elevator inspection and maintenance systems",
+      "Warning and alarm functions in elevator equipment",
+      "Battery charging with automatic charge management",
+      "Emergency and internal lighting inside the service box"
+    ],
+    "disclaimerEn": "The information is based only on the supplied details: gong, alarm, battery charger with automatic charge cut-off, timed emergency lamp, and internal lighting. Confirm final wiring diagrams and operating data before installation."
+  },
+  "bridge-rectifier-10a": {
+    "categoryLabelEn": "Power & Supply",
+    "brandEn": "Aloulou for Industry",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Product presentation image prepared at 1180×1000 px and optimized for the web.",
+    "shortEn": "A 10 A bridge rectifier manufactured by Aloulou for Industry for rectification and power-supply applications.",
+    "descriptionEn": "A 10 A bridge rectifier manufactured by Aloulou for Industry for converting alternating current to direct current. It uses a compact board with clearly arranged terminals and is suitable for power supplies, rectification circuits, and industrial applications requiring a stable rectification stage.",
+    "specsEn": [
+      [
+        "Product type",
+        "Bridge rectifier"
+      ],
+      [
+        "Rated current",
+        "10 A"
+      ],
+      [
+        "Brand",
+        "Aloulou for Industry"
+      ],
+      [
+        "Visible model",
+        "KBP-X708"
+      ],
+      [
+        "Visible country of manufacture",
+        "Made in Syria"
+      ]
+    ],
+    "usagesEn": [
+      "AC-to-DC rectification circuits",
+      "Electrical and electronic power supplies",
+      "Industrial and control-panel applications requiring rectification"
+    ],
+    "disclaimerEn": "The confirmed information is that this is a 10 A bridge rectifier manufactured by Aloulou for Industry. Confirm voltage, wiring, and final load data from the manufacturing documents before installation."
+  },
+  "transformer-365va": {
+    "categoryLabelEn": "Power & Supply",
+    "brandEn": "Not specified",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Product presentation image prepared at 1180×1000 px and optimized for the web.",
+    "shortEn": "A 365 VA electrical transformer suitable for power-supply and control applications.",
+    "descriptionEn": "An industrial electrical transformer rated at 365 VA. The supplied image is used as the visual reference, and the product is listed under Power & Supply for systems and control panels requiring a 365 VA transformer.",
+    "specsEn": [
+      [
+        "Product type",
+        "Electrical transformer"
+      ],
+      [
+        "Rated power",
+        "365 VA"
+      ],
+      [
+        "Brand",
+        "Not specified"
+      ],
+      [
+        "Model",
+        "Not specified"
+      ],
+      [
+        "Note",
+        "Multiple numbers and output terminals are visible on the front label"
+      ]
+    ],
+    "usagesEn": [
+      "Electrical power-supply applications",
+      "Industrial systems and control panels",
+      "Applications requiring a 365 VA transformer"
+    ],
+    "disclaimerEn": "The only confirmed specification is the 365 VA rated power. Confirm actual voltages, outputs, and the final wiring diagram from the manufacturing data before installation."
+  },
+  "elevator-sequencer-rst-ups": {
+    "categoryLabelEn": "Control & Automation",
+    "brandEn": "Aloulou for Industry",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Product presentation image prepared at 1180×1000 px and optimized for the web.",
+    "shortEn": "A sequencer that simulates R, S, and T signals to run the inverter from a UPS in an elevator rescue system.",
+    "descriptionEn": "A sequencer for elevator systems that simulates the R, S, and T phase signals so the inverter can operate from a UPS. It also supports integrating the elevator controller into the nearest-floor rescue system during a power failure.",
+    "specsEn": [
+      [
+        "Product type",
+        "Elevator sequencer"
+      ],
+      [
+        "Signal function",
+        "R / S / T signal simulation"
+      ],
+      [
+        "Integration",
+        "Inverter operation from UPS"
+      ],
+      [
+        "Rescue function",
+        "Supports travel to the nearest floor"
+      ],
+      [
+        "Brand",
+        "Aloulou for Industry"
+      ]
+    ],
+    "usagesEn": [
+      "Elevator rescue systems during power failures",
+      "Operating an elevator inverter from a UPS",
+      "Integrating the controller into a nearest-floor rescue system"
+    ],
+    "disclaimerEn": "Wiring and commissioning must be performed by a qualified technician according to the elevator panel, inverter, and UPS diagrams."
+  },
+  "elevator-transformer-550va": {
+    "categoryLabelEn": "Power & Supply",
+    "brandEn": "Aloulou for Industry",
+    "statusLabelEn": "Made to Order",
+    "imageNoteEn": "Product presentation image enhanced and optimized for the web.",
+    "shortEn": "A 550 VA transformer manufactured by Aloulou for Industry for elevator applications.",
+    "descriptionEn": "A 550 VA electrical transformer designed for elevator applications and manufactured by Aloulou for Industry. It features a stable industrial frame, an upper protective enclosure, and multiple screw terminals for integration into elevator equipment and control panels.",
+    "specsEn": [
+      [
+        "Product type",
+        "Elevator transformer"
+      ],
+      [
+        "Rated power",
+        "550 VA"
+      ],
+      [
+        "Brand",
+        "Aloulou for Industry"
+      ],
+      [
+        "Visible code",
+        "ABS"
+      ],
+      [
+        "Connection type",
+        "Multiple screw terminals"
+      ]
+    ],
+    "usagesEn": [
+      "Elevator equipment",
+      "Elevator control panels",
+      "Systems requiring a 550 VA transformer"
+    ],
+    "disclaimerEn": "The confirmed electrical specification is the 550 VA rating. Confirm the final voltages and wiring diagram from the manufacturing data before installation."
+  },
+  "industrial-control-board-220": {
+    "categoryLabelEn": "Control & Automation",
+    "brandEn": "Not specified",
+    "statusLabelEn": "Available",
+    "imageNoteEn": "The supplied product image was enhanced and prepared for website display.",
+    "shortEn": "An industrial electronic board for control and monitoring applications in electrical systems.",
+    "descriptionEn": "An industrial electronic control board containing essential components such as terminal connectors, LED indicators, a transformer, and auxiliary control units. It can be used for control, monitoring, or operating functions according to the system design and application requirements.",
+    "specsEn": [
+      [
+        "Product type",
+        "Electronic control board"
+      ],
+      [
+        "Mounting type",
+        "PCB"
+      ],
+      [
+        "Indicators",
+        "LED"
+      ],
+      [
+        "Visible board voltage",
+        "220"
+      ],
+      [
+        "Visible voltage regulator",
+        "7805"
+      ]
+    ],
+    "usagesEn": [
+      "Industrial control applications",
+      "Electrical and electronic systems",
+      "Monitoring or operating circuits"
+    ],
+    "disclaimerEn": "The information is based only on the elements and markings visible in the supplied image. No unconfirmed electrical or functional specifications were added."
+  },
+  "inv-a100": {
+    "categoryLabelEn": "Inverters",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Available",
+    "shortEn": "A demonstration solution for motor-speed control in general industrial applications.",
+    "descriptionEn": "A demonstration product used to present the product-page layout and specification structure. Replace this information with verified product data before publication.",
+    "specsEn": [
+      [
+        "Power",
+        "5.5 kW"
+      ],
+      [
+        "Input voltage",
+        "380 V"
+      ],
+      [
+        "Phases",
+        "3 Phase"
+      ],
+      [
+        "Protection rating",
+        "IP20"
+      ],
+      [
+        "Control method",
+        "V/F – Demo"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only. Replace with verified technical and commercial information before use."
+  },
+  "brk-c63": {
+    "categoryLabelEn": "Breakers & Protection",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Available",
+    "shortEn": "A demonstration three-pole breaker for circuit protection and catalog-layout testing.",
+    "descriptionEn": "These specifications are provided for prototype demonstration only and must not be used for technical or commercial approval.",
+    "specsEn": [
+      [
+        "Rated current",
+        "63 A"
+      ],
+      [
+        "Number of poles",
+        "3P"
+      ],
+      [
+        "Trip curve",
+        "C"
+      ],
+      [
+        "Voltage",
+        "400 V"
+      ],
+      [
+        "Availability",
+        "Subject to stock"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only. Confirm all specifications before technical or commercial use."
+  },
+  "cnt-d25": {
+    "categoryLabelEn": "Control & Automation",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Limited Stock",
+    "shortEn": "A demonstration contactor for switching industrial loads.",
+    "descriptionEn": "A presentation model used to test product cards, favorites, and quotation requests.",
+    "specsEn": [
+      [
+        "Operating current",
+        "25 A"
+      ],
+      [
+        "Coil voltage",
+        "220 V AC"
+      ],
+      [
+        "Contacts",
+        "3NO + 1NO"
+      ],
+      [
+        "Application",
+        "Motors and loads"
+      ],
+      [
+        "Warranty",
+        "To be determined"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only."
+  },
+  "rel-p10": {
+    "categoryLabelEn": "Control & Automation",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Available",
+    "shortEn": "A demonstration relay for monitoring and protecting circuits in control panels.",
+    "descriptionEn": "Illustrative data used to test the product-details page and technical tables.",
+    "specsEn": [
+      [
+        "Supply voltage",
+        "24–240 V"
+      ],
+      [
+        "Outputs",
+        "2 Relay"
+      ],
+      [
+        "Mounting",
+        "DIN Rail"
+      ],
+      [
+        "Indicator",
+        "LED"
+      ],
+      [
+        "Type",
+        "Demo"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only."
+  },
+  "pnl-x12": {
+    "categoryLabelEn": "Electrical Panels",
+    "brandEn": "Aloulou Manufacturing – Demo",
+    "statusLabelEn": "Made to Order",
+    "shortEn": "A customizable control-panel model designed around project requirements.",
+    "descriptionEn": "This product demonstrates how made-to-order manufactured products can be presented without displaying a fixed price.",
+    "specsEn": [
+      [
+        "Panel type",
+        "Control"
+      ],
+      [
+        "Material",
+        "Coated metal"
+      ],
+      [
+        "Protection rating",
+        "Defined to order"
+      ],
+      [
+        "Size",
+        "Custom"
+      ],
+      [
+        "Lead time",
+        "After request review"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only. Final construction details are defined after reviewing the request."
+  },
+  "sns-i18": {
+    "categoryLabelEn": "Sensors",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Available",
+    "shortEn": "A demonstration proximity sensor for non-contact detection on production lines.",
+    "descriptionEn": "The specifications and brand are temporary until verified product data is added.",
+    "specsEn": [
+      [
+        "Diameter",
+        "M18"
+      ],
+      [
+        "Output type",
+        "NPN"
+      ],
+      [
+        "Sensing distance",
+        "8 mm"
+      ],
+      [
+        "Operating voltage",
+        "10–30 V DC"
+      ],
+      [
+        "Connection",
+        "3 Wire"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only."
+  },
+  "psu-24": {
+    "categoryLabelEn": "Power & Supply",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Limited Stock",
+    "shortEn": "A demonstration 24 V power supply for automation and industrial control panels.",
+    "descriptionEn": "A demonstration page showing the organization of technical information and quotation-request actions.",
+    "specsEn": [
+      [
+        "Output voltage",
+        "24 V DC"
+      ],
+      [
+        "Output current",
+        "10 A"
+      ],
+      [
+        "Input voltage",
+        "220 V AC"
+      ],
+      [
+        "Mounting",
+        "DIN Rail"
+      ],
+      [
+        "Protection",
+        "Overload"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only."
+  },
+  "estop-r40": {
+    "categoryLabelEn": "Control & Automation",
+    "brandEn": "Demo Brand",
+    "statusLabelEn": "Available",
+    "shortEn": "A demonstration emergency-stop button for industrial panels and machinery.",
+    "descriptionEn": "The product and specifications are included for demonstration purposes only.",
+    "specsEn": [
+      [
+        "Head diameter",
+        "40 mm"
+      ],
+      [
+        "Color",
+        "Red"
+      ],
+      [
+        "Release mechanism",
+        "Twist release"
+      ],
+      [
+        "Contacts",
+        "1NC"
+      ],
+      [
+        "Mounting",
+        "Panel Mount"
+      ]
+    ],
+    "disclaimerEn": "Demonstration data only."
+  }
+}).forEach(([id, english]) => {
+  const product = window.ALOULOU_PRODUCTS.find(item => item.id === id);
+  if (product) Object.assign(product, english);
+});
