@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="نسخة تجريبية لموقع علولو للصناعة لعرض المنتجات والحلول الكهربائية والصناعية.">
+  <meta name="theme-color" content="#2d6a68">
+  <title>علولو للصناعة | النسخة التجريبية</title>
+  <link rel="icon" href="assets/images/brand/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <div class="demo-bar">نسخة استكشافية أولى — المنتجات وبيانات التواصل تجريبية</div>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="علولو للصناعة - الرئيسية">
+        <img class="brand-mark" src="assets/images/brand/logo-mark.svg" alt="">
+        <span><strong>علولو للصناعة</strong><small>Aloulou for Industry</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <a href="#products">المنتجات</a>
+        <a href="#solutions">الحلول</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="تبديل الوضع الداكن"><span aria-hidden="true">☾</span></button>
+        <button class="quote-btn" id="quoteOpen" type="button"><span>طلب السعر</span><b id="quoteCount">0</b></button>
+        <button class="menu-btn" id="menuToggle" type="button" aria-label="فتح القائمة" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow">حلول كهربائية وصناعية</span>
+        <h1>كل ما يحتاجه مشروعك،<br><em>من المنتج إلى الحل.</em></h1>
+        <p>واجهة تجريبية لعرض منتجات علولو للصناعة بطريقة منظمة، مع البحث السريع، المواصفات الفنية وطلبات الأسعار.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#products">استكشف المنتجات <span>←</span></a>
+          <button class="secondary-btn" type="button" data-scroll="#contact">تواصل معنا</button>
+        </div>
+        <div class="hero-trust">
+          <span><b>01</b> عرض تقني واضح</span>
+          <span><b>02</b> طلب سعر سريع</span>
+          <span><b>03</b> تصميم مناسب للهاتف</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="رسم تجريبي للوحة تحكم صناعية">
+        <div class="industrial-grid"></div>
+        <div class="panel-visual">
+          <div class="panel-screen"><small>SYSTEM STATUS</small><strong>READY</strong></div>
+          <div class="panel-lines"><i></i><i></i><i></i></div>
+          <div class="panel-controls"><button aria-label="زر تجريبي"></button><button aria-label="زر تجريبي"></button><button aria-label="زر تجريبي"></button></div>
+          <span class="panel-label">ALOULOU INDUSTRY</span>
+        </div>
+        <span class="floating-card card-a"><b>24/7</b><small>كتالوج متاح</small></span>
+        <span class="floating-card card-b"><b>RFQ</b><small>طلب عرض سعر</small></span>
+      </div>
+    </section>
+
+    <section class="stat-strip">
+      <div class="shell stats">
+        <div><strong>8</strong><span>منتجات تجريبية</span></div>
+        <div><strong>6</strong><span>تصنيفات أولية</span></div>
+        <div><strong>RTL</strong><span>واجهة عربية كاملة</span></div>
+        <div><strong>100%</strong><span>متجاوب مع الهاتف</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="products">
+      <div class="section-head">
+        <div><span class="eyebrow">الكتالوج التجريبي</span><h2>اكتشف المنتجات</h2><p>الصور والمواصفات مؤقتة لتجربة البنية قبل إدخال المنتجات الحقيقية.</p></div>
+        <a class="text-link" href="#productsGrid">عرض الشبكة <span>←</span></a>
+      </div>
+      <div class="catalog-tools">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="productSearch" type="search" placeholder="ابحث بالاسم أو الموديل..." autocomplete="off"></label>
+        <div class="filters" id="categoryFilters" aria-label="فلترة المنتجات">
+          <button class="is-active" data-category="all" type="button">الكل</button>
+          <button data-category="inverters" type="button">إنفرترات</button>
+          <button data-category="breakers" type="button">قواطع</button>
+          <button data-category="control" type="button">تحكم</button>
+          <button data-category="panels" type="button">لوحات</button>
+          <button data-category="sensors" type="button">حساسات</button>
+          <button data-category="power" type="button">طاقة</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><strong>لا توجد منتجات مطابقة</strong><span>جرّب كلمة بحث أو تصنيفًا آخر.</span></div>
+    </section>
+
+    <section class="section shell" id="solutions">
+      <div class="section-head compact"><div><span class="eyebrow">من المنتج إلى التطبيق</span><h2>حلول حسب احتياجك</h2></div></div>
+      <div class="solutions-grid">
+        <article class="solution-card"><span>01</span><div class="solution-icon">⌁</div><h3>التحكم بالمحركات</h3><p>عرض الإنفرترات وعناصر التحكم ضمن مسار واضح يساعد العميل على الوصول إلى المنتج المناسب.</p><a href="#products" data-filter="inverters">استكشف المنتجات ←</a></article>
+        <article class="solution-card"><span>02</span><div class="solution-icon">▤</div><h3>تجهيز اللوحات</h3><p>استقبال متطلبات المشروع والصور والملفات لتجهيز عرض سعر مخصص.</p><button type="button" class="link-button" data-open-quote>ابدأ طلبًا ←</button></article>
+        <article class="solution-card"><span>03</span><div class="solution-icon">⏻</div><h3>الحماية والتوزيع</h3><p>تنظيم القواطع وملحقات الحماية ضمن تصنيفات ومواصفات سهلة المقارنة.</p><a href="#products" data-filter="breakers">استكشف المنتجات ←</a></article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="shell about-grid">
+        <div class="about-visual"><div class="about-badge"><strong>A+</strong><span>هوية تجريبية</span></div><div class="about-lines"></div></div>
+        <div class="about-copy"><span class="eyebrow">عن المشروع</span><h2>هوية سابقة، ولكن بعقل صناعي جديد.</h2><p>تم نقل الألوان البترولية والنحاسية، البطاقات النظيفة والوضع الداكن من المشروع السابق، ثم إعادة توظيفها لبناء واجهة صناعية أكثر قوة ووضوحًا.</p><ul><li>كتالوج منتجات قابل للتوسع</li><li>صفحات تفاصيل بمواصفات فنية</li><li>مفضلة وطلب عرض سعر محفوظ محليًا</li><li>بنية مناسبة لاحقًا للربط بلوحة إدارة</li></ul><button class="primary-btn" type="button" data-open-quote>اطلب عرض سعر تجريبي <span>←</span></button></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="contact">
+      <div class="contact-card">
+        <div><span class="eyebrow">تواصل مباشر</span><h2>أرسل احتياجك وسنحوّله إلى طلب واضح.</h2><p>في النسخة النهائية سيُربط النموذج بالبريد أو WhatsApp أو نظام إدارة العملاء.</p><div class="contact-points"><span><b>الهاتف</b>[يضاف الرقم الرسمي]</span><span><b>الموقع</b>حلب — [يضاف العنوان]</span><span><b>البريد</b>[يضاف البريد الرسمي]</span></div></div>
+        <form class="contact-form" id="contactForm">
+          <label>الاسم<input required name="name" placeholder="الاسم الكامل"></label>
+          <label>رقم الهاتف<input required name="phone" inputmode="tel" placeholder="09xxxxxxxx"></label>
+          <label>نوع الطلب<select name="type"><option>استفسار عن منتج</option><option>طلب عرض سعر</option><option>تجهيز لوحة</option><option>طلب جملة</option></select></label>
+          <label>تفاصيل الطلب<textarea required name="message" rows="4" placeholder="اذكر المنتج، الكمية والمواصفات المطلوبة..."></textarea></label>
+          <button class="primary-btn full" type="submit">إنشاء رسالة تجريبية</button>
+          <p class="form-note" id="formNote">لن تُرسل أي بيانات فعليًا في هذه النسخة.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div class="brand footer-brand"><img class="brand-mark" src="assets/images/brand/logo-mark.svg" alt=""><span><strong>علولو للصناعة</strong><small>نسخة استكشافية 1.0</small></span></div><p>© <span id="year"></span> — جميع البيانات داخل هذه النسخة تجريبية.</p><a href="#top">العودة للأعلى ↑</a></div></footer>
+
+  <aside class="quote-drawer" id="quoteDrawer" aria-hidden="true" aria-label="طلب عرض السعر">
+    <div class="drawer-backdrop" data-close-quote></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-head"><div><span>طلب عرض سعر</span><h2 id="drawerTitle">منتجاتك المختارة</h2></div><button class="icon-btn" type="button" data-close-quote aria-label="إغلاق">×</button></div>
+      <div class="quote-items" id="quoteItems"></div>
+      <div class="quote-empty" id="quoteEmpty"><strong>لم تختر أي منتج بعد</strong><p>أضف المنتجات من الكتالوج، ثم أنشئ رسالة الطلب.</p></div>
+      <div class="drawer-actions"><button class="primary-btn full" id="createQuoteMessage" type="button">إنشاء رسالة الطلب</button><button class="ghost-btn full" id="clearQuote" type="button">إفراغ القائمة</button></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
