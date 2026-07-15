@@ -28,7 +28,7 @@
   }
   function renderProducts() {
     const q = state.query.trim().toLowerCase();
-    const filtered = products.filter(p => (state.category === "all" || p.category === state.category) && (!q || [p.name,p.nameEn,p.model,p.brand,p.categoryLabel].join(" ").toLowerCase().includes(q)));
+    const filtered = products.filter(p => (state.category === "all" || p.category === state.category) && (!q || [p.name,p.nameEn,p.model,p.brand,p.categoryLabel,p.short,p.description,...(p.searchTerms || [])].join(" ").toLowerCase().includes(q)));
     grid.innerHTML = filtered.map(productCard).join("");
     empty.hidden = filtered.length > 0;
   }
@@ -62,11 +62,26 @@
   document.querySelector("#quoteOpen").addEventListener("click", openQuote);
   document.querySelector("#clearQuote").addEventListener("click", () => { quote=[]; saveQuote(); showToast("تم إفراغ طلب السعر"); });
   document.querySelector("#createQuoteMessage").addEventListener("click", () => { if(!quote.length){showToast("أضف منتجًا واحدًا على الأقل"); return;} const lines=quote.map(id=>products.find(p=>p.id===id)).filter(Boolean).map((p,i)=>`${i+1}. ${p.name} — ${p.model}`); navigator.clipboard?.writeText(`مرحبًا، أريد عرض سعر للمنتجات التالية:\n${lines.join("\n")}\nالكمية المطلوبة: ...\nالمدينة: ...`).then(()=>showToast("تم نسخ رسالة الطلب التجريبية")); });
-  document.querySelector("#contactForm").addEventListener("submit", e => { e.preventDefault(); const data=new FormData(e.currentTarget); const text=`مرحبًا، أنا ${data.get("name")}، رقم الهاتف: ${data.get("phone")}\nنوع الطلب: ${data.get("type")}\nالتفاصيل: ${data.get("message")}`; navigator.clipboard?.writeText(text); document.querySelector("#formNote").textContent="تم إنشاء الرسالة ونسخها — لم تُرسل فعليًا."; showToast("تم إنشاء الرسالة التجريبية"); });
+  document.querySelector("#contactForm").addEventListener("submit", e => { e.preventDefault(); const data=new FormData(e.currentTarget); const text=`مرحبًا أستاذ فخر الدين، أنا ${data.get("name")}، رقم الهاتف: ${data.get("phone")}\nنوع الطلب: ${data.get("type")}\nالتفاصيل: ${data.get("message")}`; const whatsappUrl=`https://wa.me/963966248480?text=${encodeURIComponent(text)}`; window.open(whatsappUrl, "_blank", "noopener"); document.querySelector("#formNote").textContent="تم فتح WhatsApp ورسالة الطلب جاهزة للإرسال."; showToast("تم تجهيز رسالة WhatsApp"); });
   document.querySelector("#themeToggle").addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
   const menuBtn=document.querySelector("#menuToggle"); menuBtn.addEventListener("click",()=>{const open=document.querySelector("#mainNav").classList.toggle("is-open");menuBtn.setAttribute("aria-expanded",String(open));});
   document.querySelectorAll("#mainNav a").forEach(a=>a.addEventListener("click",()=>{document.querySelector("#mainNav").classList.remove("is-open");menuBtn.setAttribute("aria-expanded","false");}));
   document.querySelector("#year").textContent = new Date().getFullYear();
   document.addEventListener("keydown", e => { if(e.key === "Escape") closeQuote(); });
   setTheme(localStorage.getItem("aloulouTheme") || "light"); renderProducts(); renderQuote();
+
+  const printCatalogButton = document.querySelector("#printCatalog");
+  printCatalogButton?.addEventListener("click", () => window.open("catalog.html?print=1", "_blank", "noopener"));
+
+  // Default landing position: open directly at the products catalog when no section was requested.
+  if (!window.location.hash) {
+    requestAnimationFrame(() => {
+      const productsSection = document.querySelector("#products");
+      const header = document.querySelector(".site-header");
+      if (productsSection) {
+        const offset = (header?.offsetHeight || 0) + 12;
+        window.scrollTo({ top: Math.max(0, productsSection.offsetTop - offset), behavior: "auto" });
+      }
+    });
+  }
 })();
