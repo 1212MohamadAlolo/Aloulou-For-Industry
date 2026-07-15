@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef6f4"/><stop offset="1" stop-color="#dfeeea"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#173d3a" flood-opacity=".16"/></filter></defs>
+<rect width="800" height="620" rx="48" fill="url(#bg)"/>
+<circle cx="690" cy="88" r="118" fill="none" stroke="#c98b5c" stroke-width="28" opacity=".16"/>
+<g filter="url(#s)"><rect x="235" y="120" width="330" height="350" rx="34" fill="#fff" stroke="#b9d2cd" stroke-width="5"/><rect x="265" y="150" width="270" height="94" rx="18" fill="#203b37"/><text x="400" y="214" text-anchor="middle" fill="#fff" font-family="Arial" font-size="52" font-weight="700">!</text><rect x="270" y="278" width="260" height="20" rx="10" fill="#dbe7e3"/><rect x="270" y="322" width="185" height="20" rx="10" fill="#dbe7e3"/><circle cx="307" cy="401" r="22" fill="#c98b5c"/><circle cx="375" cy="401" r="22" fill="#2d6a68"/><rect x="427" y="381" width="84" height="40" rx="12" fill="#e4f1ef"/></g>
+<text x="400" y="535" text-anchor="middle" fill="#1f4f4d" font-family="Arial" font-size="28" font-weight="700">EMERGENCY</text>
+<text x="400" y="575" text-anchor="middle" fill="#667773" font-family="Arial" font-size="24">DEMO PRODUCT</text>
+</svg>
