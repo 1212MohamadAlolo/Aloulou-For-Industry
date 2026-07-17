@@ -128,27 +128,6 @@ window.ALOULOU_PRODUCTS = [
     disclaimer: "المعلومة الكهربائية المؤكدة المتاحة هي الاستطاعة الاسمية 550VA. يجب اعتماد مخطط التوصيل والجهود النهائية من بيانات التصنيع قبل التركيب."
   },
   {
-    id: "industrial-control-board-220",
-    name: "لوحة تحكم إلكترونية صناعية",
-    nameEn: "Industrial Electronic Control Board",
-    category: "control",
-    categoryLabel: "تحكم وأتمتة",
-    brand: "غير محدد",
-    model: "غير محدد",
-    image: "assets/images/products/industrial-electronic-control-board.webp",
-    status: "available",
-    statusLabel: "متوفر",
-    featured: true,
-    realProduct: true,
-    imageNote: "صورة المنتج المرفقة بعد تحسينها وتجهيزها للعرض داخل الموقع.",
-    short: "لوحة إلكترونية صناعية مخصصة لتطبيقات التحكم والمراقبة داخل الأنظمة الكهربائية.",
-    description: "لوحة تحكم إلكترونية صناعية تحتوي على مجموعة من العناصر الإلكترونية الأساسية مثل الموصلات الطرفية، المؤشرات الضوئية، المحول، ووحدات التحكم المساعدة. تُستخدم ضمن تطبيقات التحكم أو المراقبة أو التشغيل داخل الأنظمة الكهربائية والصناعية بحسب تصميم النظام ومتطلبات الاستخدام.",
-    specs: [["نوع المنتج", "لوحة تحكم إلكترونية"], ["نوع التركيب", "لوحة PCB"], ["المؤشرات الضوئية", "LED"], ["الجهد الظاهر على اللوحة", "220"], ["منظم الجهد الظاهر", "7805"]],
-    usages: ["تطبيقات التحكم الصناعي", "الأنظمة الكهربائية والإلكترونية", "دوائر المراقبة أو التشغيل"],
-    searchTerms: ["لوحة إلكترونية", "لوحة تحكم", "PCB", "control board", "electronic board", "220", "7805"],
-    disclaimer: "تعتمد المعلومات على البيانات والعناصر الظاهرة في الصورة المرفقة فقط. لم تُضف مواصفات كهربائية أو وظيفية غير مؤكدة."
-  },
-  {
     id: "inv-a100",
     name: "إنفرتر صناعي A100",
     nameEn: "Industrial Inverter A100",
@@ -275,7 +254,673 @@ window.ALOULOU_PRODUCTS = [
     short: "زر طوارئ تجريبي للوحات والآلات الصناعية.",
     description: "المنتج والمواصفات ضمن النسخة التجريبية فقط.",
     specs: [["قطر الرأس", "40 mm"], ["اللون", "أحمر"], ["آلية التحرير", "لف"], ["التلامسات", "1NC"], ["التركيب", "Panel Mount"]]
+  },
+{
+    "id": "dual-beam-sensor-m218d",
+    "name": "حساس شعاع ضوئي مزدوج",
+    "nameEn": "Dual-Beam Photoelectric Sensor",
+    "category": "sensors",
+    "categoryLabel": "حساسات",
+    "categoryLabelEn": "Sensors",
+    "brand": "غير محدد",
+    "brandEn": "Not specified",
+    "model": "M-218D",
+    "image": "assets/images/products/dual-beam-sensor-m218d.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المنتج المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied product image was prepared for website display.",
+    "short": "خلية ضوئية بشعاعين، مقاومة لتشويش الإنفرتر والضوء الساطع وسهلة التركيب.",
+    "shortEn": "Dual-beam photoelectric sensor resistant to inverter interference and bright light, with easy installation.",
+    "description": "حساس خلية ضوئية يعمل بشعاعين، مصمم للكشف الموثوق مع مقاومة لتشويش الإنفرتر والضوء الساطع، ويتميز بسهولة التركيب.",
+    "descriptionEn": "A dual-beam photoelectric sensor designed for reliable detection, with resistance to inverter interference and bright light, and easy installation.",
+    "specs": [
+      [
+        "نوع الاستشعار",
+        "شعاعان ضوئيان"
+      ],
+      [
+        "مقاومة التشويش",
+        "مقاوم لتشويش الإنفرتر"
+      ],
+      [
+        "مقاومة الإضاءة",
+        "مقاوم للضوء الساطع"
+      ],
+      [
+        "التركيب",
+        "سهل التركيب"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Sensing type",
+        "Dual beam"
+      ],
+      [
+        "Interference resistance",
+        "Resistant to inverter interference"
+      ],
+      [
+        "Light resistance",
+        "Resistant to bright light"
+      ],
+      [
+        "Installation",
+        "Easy installation"
+      ]
+    ],
+    "usages": [
+      "تطبيقات الكشف والحماية",
+      "أنظمة الأبواب والمصاعد"
+    ],
+    "usagesEn": [
+      "Detection and safety applications",
+      "Door and elevator systems"
+    ],
+    "searchTerms": [
+      "خلية ضوئية",
+      "حساس شعاعين",
+      "M-218D",
+      "dual beam",
+      "photoelectric sensor"
+    ],
+    "disclaimer": "يجب اعتماد جهد التشغيل ومدى الاستشعار وطريقة التوصيل من بيانات المنتج قبل التركيب.",
+    "disclaimerEn": "Confirm the operating voltage, sensing range, and wiring method from the product data before installation."
+  },
+  {
+    "id": "schneider-ic60n-breakers",
+    "name": "قاطع شنايدر مفرد ومزدوج",
+    "nameEn": "Schneider Single and Double Pole Breakers",
+    "category": "breakers",
+    "categoryLabel": "قواطع وحماية",
+    "categoryLabelEn": "Breakers & Protection",
+    "brand": "Schneider Electric",
+    "brandEn": "Schneider Electric",
+    "model": "iC60N",
+    "image": "assets/images/products/schneider-ic60n-breakers.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المنتج المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied product image was prepared for website display.",
+    "short": "قاطع شنايدر iC60N متوفر بخيار مفرد 6A وخيار مزدوج 40A.",
+    "shortEn": "Schneider iC60N breaker available as a single-pole 6 A or double-pole 40 A option.",
+    "description": "قواطع حماية من شنايدر إلكتريك ضمن سلسلة iC60N، متوفرة بخيار مفرد بتيار 6 أمبير وخيار مزدوج بتيار 40 أمبير.",
+    "descriptionEn": "Schneider Electric iC60N protection breakers, available as a 6 A single-pole option and a 40 A double-pole option.",
+    "specs": [
+      [
+        "السلسلة",
+        "iC60N"
+      ],
+      [
+        "الخيار الأول",
+        "مفرد 1P - 6A"
+      ],
+      [
+        "الخيار الثاني",
+        "مزدوج 2P - 40A"
+      ],
+      [
+        "منحنى الفصل الظاهر",
+        "C"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Series",
+        "iC60N"
+      ],
+      [
+        "Option 1",
+        "Single pole 1P - 6 A"
+      ],
+      [
+        "Option 2",
+        "Double pole 2P - 40 A"
+      ],
+      [
+        "Visible trip curve",
+        "C"
+      ]
+    ],
+    "usages": [
+      "لوحات التوزيع",
+      "حماية الدارات الكهربائية"
+    ],
+    "usagesEn": [
+      "Distribution panels",
+      "Electrical circuit protection"
+    ],
+    "searchTerms": [
+      "شنايدر",
+      "Schneider",
+      "iC60N",
+      "6A",
+      "40A",
+      "قاطع مفرد",
+      "قاطع مزدوج"
+    ],
+    "disclaimer": "يجب اعتماد الجهد وقدرة القطع وبقية المواصفات من بيانات الشركة المصنّعة قبل الاستخدام.",
+    "disclaimerEn": "Confirm voltage, breaking capacity, and all remaining specifications from the manufacturer's data before use."
+  },
+  {
+    "id": "handheld-radio-tssd",
+    "name": "جهاز اتصال لاسلكي مع قاعدة شحن",
+    "nameEn": "Handheld Two-Way Radio with Charging Dock",
+    "category": "control",
+    "categoryLabel": "تحكم وأتمتة",
+    "categoryLabelEn": "Control & Automation",
+    "brand": "TSSD",
+    "brandEn": "TSSD",
+    "model": "غير محدد",
+    "image": "assets/images/products/handheld-radio-tssd.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المنتج المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied product image was prepared for website display.",
+    "short": "جهاز اتصال لاسلكي محمول مع قاعدة شحن للاستخدام في مواقع العمل والمنشآت.",
+    "shortEn": "Handheld two-way radio with a charging dock for worksites and facilities.",
+    "description": "جهاز اتصال لاسلكي محمول مزود بهوائي وقاعدة شحن وزر جانبي للتحدث وأزرار تحكم إضافية، مناسب للتواصل بين فرق العمل.",
+    "descriptionEn": "A handheld two-way radio with an antenna, charging dock, side push-to-talk button, and additional control buttons for team communication.",
+    "specs": [
+      [
+        "نوع المنتج",
+        "جهاز اتصال لاسلكي محمول"
+      ],
+      [
+        "قاعدة الشحن",
+        "مرفقة"
+      ],
+      [
+        "زر التحدث",
+        "جانبي"
+      ],
+      [
+        "مكبر الصوت",
+        "أمامي مدمج"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Product type",
+        "Handheld two-way radio"
+      ],
+      [
+        "Charging dock",
+        "Included"
+      ],
+      [
+        "Talk button",
+        "Side mounted"
+      ],
+      [
+        "Speaker",
+        "Integrated front speaker"
+      ]
+    ],
+    "usages": [
+      "مواقع العمل والمنشآت",
+      "التواصل بين فرق العمل"
+    ],
+    "usagesEn": [
+      "Worksites and facilities",
+      "Communication between work teams"
+    ],
+    "searchTerms": [
+      "لاسلكي",
+      "جهاز اتصال",
+      "TSSD",
+      "two way radio",
+      "walkie talkie"
+    ],
+    "disclaimer": "لم تُحدد الترددات أو عدد القنوات أو مدى الاتصال أو سعة البطارية؛ يجب اعتمادها من بيانات المنتج.",
+    "disclaimerEn": "Frequency, channel count, communication range, and battery capacity were not provided; confirm them from the product data."
+  },
+  {
+    "id": "garage-door-photoelectric-sensor",
+    "name": "خلية ضوئية لباب الكراج",
+    "nameEn": "Photoelectric Sensor for Garage Doors",
+    "category": "sensors",
+    "categoryLabel": "حساسات",
+    "categoryLabelEn": "Sensors",
+    "brand": "غير محدد",
+    "brandEn": "Not specified",
+    "model": "غير محدد",
+    "image": "assets/images/products/garage-door-photoelectric-sensor.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المنتج المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied product image was prepared for website display.",
+    "short": "خلية ضوئية لأبواب الكراج والبوابات الآلية، مقاومة للضوء الساطع.",
+    "shortEn": "Photoelectric sensor for garage doors and automatic gates, resistant to bright light.",
+    "description": "خلية ضوئية مخصصة لأبواب الكراج والبوابات الآلية، تتكون من مرسل ومستقبل وتتميز بمقاومتها للضوء الساطع.",
+    "descriptionEn": "A photoelectric sensor for garage doors and automatic gates, consisting of a transmitter and receiver and resistant to bright light.",
+    "specs": [
+      [
+        "الاستخدام",
+        "أبواب الكراج والبوابات الآلية"
+      ],
+      [
+        "المكونات",
+        "مرسل ومستقبل"
+      ],
+      [
+        "مقاومة الإضاءة",
+        "مقاومة للضوء الساطع"
+      ],
+      [
+        "خرج الريليه الظاهر على العبوة",
+        "N.C أو N.O"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Application",
+        "Garage doors and automatic gates"
+      ],
+      [
+        "Components",
+        "Transmitter and receiver"
+      ],
+      [
+        "Light resistance",
+        "Resistant to bright light"
+      ],
+      [
+        "Relay output shown on package",
+        "N.C or N.O"
+      ]
+    ],
+    "usages": [
+      "أبواب الكراج",
+      "البوابات الآلية",
+      "أنظمة أمان الأبواب"
+    ],
+    "usagesEn": [
+      "Garage doors",
+      "Automatic gates",
+      "Door safety systems"
+    ],
+    "searchTerms": [
+      "خلية باب كراج",
+      "حساس باب كراج",
+      "garage door sensor",
+      "photoelectric"
+    ],
+    "disclaimer": "يجب اعتماد جهد التشغيل ومدى الشعاع وطريقة التوصيل من بيانات المنتج قبل التركيب.",
+    "disclaimerEn": "Confirm the operating voltage, beam range, and wiring method from the product data before installation."
+  },
+  {
+    "id": "access-control-fingerprint-card-pin",
+    "name": "أكسس كود ببصمة وكرت ورمز",
+    "nameEn": "Access Control Keypad with Fingerprint, Card, and PIN",
+    "category": "control",
+    "categoryLabel": "تحكم وأتمتة",
+    "categoryLabelEn": "Control & Automation",
+    "brand": "غير محدد",
+    "brandEn": "Not specified",
+    "model": "غير محدد",
+    "image": "assets/images/products/access-control-keypad.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المنتج المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied product image was prepared for website display.",
+    "short": "جهاز تحكم بالدخول يدعم 300 بصمة و1000 كرت و1000 كود، ومضاد للماء.",
+    "shortEn": "Water-resistant access-control keypad supporting 300 fingerprints, 1000 cards, and 1000 PIN codes.",
+    "description": "جهاز أكسس كود للتحكم بالدخول بواجهة رقمية وقارئ بصمة مدمج، ويدعم الدخول بالبصمة أو الكرت أو الرمز.",
+    "descriptionEn": "An access-control keypad with a numeric interface and integrated fingerprint reader, supporting entry by fingerprint, card, or PIN.",
+    "specs": [
+      [
+        "سعة البصمات",
+        "300 بصمة"
+      ],
+      [
+        "سعة الكروت",
+        "1000 كرت"
+      ],
+      [
+        "سعة الأكواد",
+        "1000 كود"
+      ],
+      [
+        "مقاومة الماء",
+        "نعم"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Fingerprint capacity",
+        "300"
+      ],
+      [
+        "Card capacity",
+        "1000"
+      ],
+      [
+        "PIN capacity",
+        "1000"
+      ],
+      [
+        "Water resistant",
+        "Yes"
+      ]
+    ],
+    "usages": [
+      "الأبواب والمداخل",
+      "المكاتب والمنشآت",
+      "أنظمة التحكم بالدخول"
+    ],
+    "usagesEn": [
+      "Doors and entrances",
+      "Offices and facilities",
+      "Access-control systems"
+    ],
+    "searchTerms": [
+      "اكسس كود",
+      "أكسس كود",
+      "بصمة",
+      "كرت",
+      "كود",
+      "access control"
+    ],
+    "disclaimer": "يجب اعتماد جهد التشغيل ونوع الكروت ودرجة مقاومة الماء وطريقة التوصيل من بيانات المنتج.",
+    "disclaimerEn": "Confirm operating voltage, card type, water-resistance rating, and wiring method from the product data."
+  },
+  {
+    "id": "assorted-proximity-sensors",
+    "name": "حساسات متنوعة NC / NO / Latch",
+    "nameEn": "Assorted Sensors NC / NO / Latch",
+    "category": "sensors",
+    "categoryLabel": "حساسات",
+    "categoryLabelEn": "Sensors",
+    "brand": "غير محدد",
+    "brandEn": "Not specified",
+    "model": "NC / NO / Latch",
+    "image": "assets/images/products/sensor-nc-green.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "اختر النوع من صفحة التفاصيل لتتغير الصورة والبيانات وفق اللون.",
+    "imageNoteEn": "Select the type on the details page to change the image and data according to its color.",
+    "short": "حساسات بثلاثة أنواع: NC أخضر، NO أزرق، وLatch أحمر.",
+    "shortEn": "Sensors in three types: green NC, blue NO, and red Latch.",
+    "description": "حساسات متنوعة مزودة بكابل توصيل، متوفرة بثلاثة أنواع تشغيل مميزة بالألوان.",
+    "descriptionEn": "Assorted sensors with attached cable, available in three color-coded operating types.",
+    "specs": [
+      [
+        "الأنواع المتوفرة",
+        "NC / NO / Latch"
+      ],
+      [
+        "NC",
+        "اللون الأخضر"
+      ],
+      [
+        "NO",
+        "اللون الأزرق"
+      ],
+      [
+        "Latch",
+        "اللون الأحمر"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Available types",
+        "NC / NO / Latch"
+      ],
+      [
+        "NC",
+        "Green"
+      ],
+      [
+        "NO",
+        "Blue"
+      ],
+      [
+        "Latch",
+        "Red"
+      ]
+    ],
+    "usages": [
+      "تطبيقات الكشف والتحكم",
+      "الآلات والأنظمة الصناعية"
+    ],
+    "usagesEn": [
+      "Detection and control applications",
+      "Machines and industrial systems"
+    ],
+    "searchTerms": [
+      "حساس NC",
+      "حساس NO",
+      "Latch",
+      "اخضر",
+      "ازرق",
+      "احمر",
+      "sensor"
+    ],
+    "disclaimer": "لم تُحدد مسافة الاستشعار أو جهد التشغيل أو مخطط الأسلاك؛ يجب اعتمادها من بيانات كل نوع قبل التركيب.",
+    "disclaimerEn": "Sensing distance, operating voltage, and wiring diagram were not provided; confirm them for each type before installation.",
+    "variants": [
+      {
+        "id": "nc-green",
+        "name": "NC - الأخضر",
+        "nameEn": "NC - Green",
+        "model": "NC",
+        "image": "assets/images/products/sensor-nc-green.webp",
+        "color": "#259b58",
+        "description": "حساس من نوع NC، مميز باللون الأخضر ومزود بكابل توصيل.",
+        "descriptionEn": "NC sensor identified by the green color and supplied with an attached cable.",
+        "specs": [
+          [
+            "نوع التشغيل",
+            "NC"
+          ],
+          [
+            "لون التمييز",
+            "أخضر"
+          ],
+          [
+            "التوصيل",
+            "كابل مرفق"
+          ]
+        ],
+        "specsEn": [
+          [
+            "Operating type",
+            "NC"
+          ],
+          [
+            "Identification color",
+            "Green"
+          ],
+          [
+            "Connection",
+            "Attached cable"
+          ]
+        ]
+      },
+      {
+        "id": "no-blue",
+        "name": "NO - الأزرق",
+        "nameEn": "NO - Blue",
+        "model": "NO",
+        "image": "assets/images/products/sensor-no-blue.webp",
+        "color": "#246bb3",
+        "description": "حساس من نوع NO، مميز باللون الأزرق ومزود بكابل توصيل.",
+        "descriptionEn": "NO sensor identified by the blue color and supplied with an attached cable.",
+        "specs": [
+          [
+            "نوع التشغيل",
+            "NO"
+          ],
+          [
+            "لون التمييز",
+            "أزرق"
+          ],
+          [
+            "التوصيل",
+            "كابل مرفق"
+          ]
+        ],
+        "specsEn": [
+          [
+            "Operating type",
+            "NO"
+          ],
+          [
+            "Identification color",
+            "Blue"
+          ],
+          [
+            "Connection",
+            "Attached cable"
+          ]
+        ]
+      },
+      {
+        "id": "latch-red",
+        "name": "Latch - الأحمر",
+        "nameEn": "Latch - Red",
+        "model": "Latch",
+        "image": "assets/images/products/sensor-latch-red.webp",
+        "color": "#ba3d36",
+        "description": "حساس من نوع Latch، مميز باللون الأحمر ومزود بكابل توصيل.",
+        "descriptionEn": "Latch sensor identified by the red color and supplied with an attached cable.",
+        "specs": [
+          [
+            "نوع التشغيل",
+            "Latch"
+          ],
+          [
+            "لون التمييز",
+            "أحمر"
+          ],
+          [
+            "التوصيل",
+            "كابل مرفق"
+          ]
+        ],
+        "specsEn": [
+          [
+            "Operating type",
+            "Latch"
+          ],
+          [
+            "Identification color",
+            "Red"
+          ],
+          [
+            "Connection",
+            "Attached cable"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wireless-generator-control-kit",
+    "name": "مجموعة تحكم لاسلكية للطاقة والمولد",
+    "nameEn": "Wireless Power and Generator Control Kit",
+    "category": "control",
+    "categoryLabel": "تحكم وأتمتة",
+    "categoryLabelEn": "Control & Automation",
+    "brand": "غير محدد",
+    "brandEn": "Not specified",
+    "model": "غير محدد",
+    "image": "assets/images/products/wireless-generator-control-kit.webp",
+    "status": "order",
+    "statusLabel": "حسب الطلب",
+    "statusLabelEn": "Made to Order",
+    "featured": true,
+    "realProduct": true,
+    "imageNote": "صورة المجموعة المرفقة بعد تجهيزها للعرض على الموقع.",
+    "imageNoteEn": "The supplied kit image was prepared for website display.",
+    "short": "مجموعة تضم كف الاستقبال وعلبة الطاقة وعلبة المولد ومفتاح الريموت.",
+    "shortEn": "A kit including the receiver unit, power box, generator box, and remote key.",
+    "description": "مجموعة تحكم لاسلكية تتكون من كف الاستقبال وعلبة الطاقة وعلبة المولد ومفتاح الريموت، مع التوصيلات الظاهرة في الصورة.",
+    "descriptionEn": "A wireless control kit consisting of the receiver unit, power box, generator box, and remote key, with the connections shown in the image.",
+    "specs": [
+      [
+        "كف الاستقبال",
+        "مرفق"
+      ],
+      [
+        "علبة الطاقة",
+        "مرفقة"
+      ],
+      [
+        "علبة المولد",
+        "مرفقة"
+      ],
+      [
+        "مفتاح الريموت",
+        "مرفق"
+      ],
+      [
+        "الجهد الظاهر على الوحدة",
+        "12 V"
+      ]
+    ],
+    "specsEn": [
+      [
+        "Receiver unit",
+        "Included"
+      ],
+      [
+        "Power box",
+        "Included"
+      ],
+      [
+        "Generator box",
+        "Included"
+      ],
+      [
+        "Remote key",
+        "Included"
+      ],
+      [
+        "Voltage visible on the unit",
+        "12 V"
+      ]
+    ],
+    "usages": [
+      "التحكم اللاسلكي بالطاقة والمولد",
+      "أنظمة التشغيل عن بعد"
+    ],
+    "usagesEn": [
+      "Wireless power and generator control",
+      "Remote operating systems"
+    ],
+    "searchTerms": [
+      "كف الاستقبال",
+      "علبة الطاقة",
+      "علبة المولد",
+      "ريموت",
+      "مولد",
+      "wireless control"
+    ],
+    "disclaimer": "يجب اعتماد قدرة التحميل ومدى الريموت ومخطط التوصيل النهائي من بيانات المجموعة قبل التركيب.",
+    "disclaimerEn": "Confirm load capacity, remote range, and the final wiring diagram from the kit data before installation."
   }
+
 ];
 
 // Complete English product content for the bilingual interface.
@@ -508,42 +1153,6 @@ Object.entries({
       "Systems requiring a 550 VA transformer"
     ],
     "disclaimerEn": "The confirmed electrical specification is the 550 VA rating. Confirm the final voltages and wiring diagram from the manufacturing data before installation."
-  },
-  "industrial-control-board-220": {
-    "categoryLabelEn": "Control & Automation",
-    "brandEn": "Not specified",
-    "statusLabelEn": "Available",
-    "imageNoteEn": "The supplied product image was enhanced and prepared for website display.",
-    "shortEn": "An industrial electronic board for control and monitoring applications in electrical systems.",
-    "descriptionEn": "An industrial electronic control board containing essential components such as terminal connectors, LED indicators, a transformer, and auxiliary control units. It can be used for control, monitoring, or operating functions according to the system design and application requirements.",
-    "specsEn": [
-      [
-        "Product type",
-        "Electronic control board"
-      ],
-      [
-        "Mounting type",
-        "PCB"
-      ],
-      [
-        "Indicators",
-        "LED"
-      ],
-      [
-        "Visible board voltage",
-        "220"
-      ],
-      [
-        "Visible voltage regulator",
-        "7805"
-      ]
-    ],
-    "usagesEn": [
-      "Industrial control applications",
-      "Electrical and electronic systems",
-      "Monitoring or operating circuits"
-    ],
-    "disclaimerEn": "The information is based only on the elements and markings visible in the supplied image. No unconfirmed electrical or functional specifications were added."
   },
   "inv-a100": {
     "categoryLabelEn": "Inverters",
@@ -789,3 +1398,58 @@ Object.entries({
   const product = window.ALOULOU_PRODUCTS.find(item => item.id === id);
   if (product) Object.assign(product, english);
 });
+
+
+// Stable internal Artikelnummer and display order.
+(() => {
+  const articleMeta = {
+    "elevator-revision-box":               { articleNumber: "ALO-EL-001", displayOrder: 1,   isDemo: false },
+    "elevator-sequencer-rst-ups":          { articleNumber: "ALO-EL-002", displayOrder: 2,   isDemo: false },
+    "voltage-doubler":                     { articleNumber: "ALO-PW-001", displayOrder: 3,   isDemo: false },
+    "bridge-rectifier-10a":                { articleNumber: "ALO-PW-002", displayOrder: 4,   isDemo: false },
+    "transformer-365va":                   { articleNumber: "ALO-PW-003", displayOrder: 5,   isDemo: false },
+    "elevator-transformer-550va":          { articleNumber: "ALO-PW-004", displayOrder: 6,   isDemo: false },
+    "dual-beam-sensor-m218d":              { articleNumber: "ALO-SN-001", displayOrder: 8,   isDemo: false },
+    "garage-door-photoelectric-sensor":    { articleNumber: "ALO-SN-002", displayOrder: 9,   isDemo: false },
+    "assorted-proximity-sensors":          { articleNumber: "ALO-SN-003", displayOrder: 10,  isDemo: false },
+    "schneider-ic60n-breakers":            { articleNumber: "ALO-BR-001", displayOrder: 11,  isDemo: false },
+    "access-control-fingerprint-card-pin": { articleNumber: "ALO-AC-001", displayOrder: 12,  isDemo: false },
+    "handheld-radio-tssd":                 { articleNumber: "ALO-CM-001", displayOrder: 13,  isDemo: false },
+    "wireless-generator-control-kit":      { articleNumber: "ALO-KT-001", displayOrder: 14,  isDemo: false },
+
+    "inv-a100":                            { articleNumber: "ALO-DM-901", displayOrder: 901, isDemo: true },
+    "brk-c63":                             { articleNumber: "ALO-DM-902", displayOrder: 902, isDemo: true },
+    "cnt-d25":                             { articleNumber: "ALO-DM-903", displayOrder: 903, isDemo: true },
+    "rel-p10":                             { articleNumber: "ALO-DM-904", displayOrder: 904, isDemo: true },
+    "pnl-x12":                             { articleNumber: "ALO-DM-905", displayOrder: 905, isDemo: true },
+    "sns-i18":                             { articleNumber: "ALO-DM-906", displayOrder: 906, isDemo: true },
+    "psu-24":                              { articleNumber: "ALO-DM-907", displayOrder: 907, isDemo: true },
+    "estop-r40":                           { articleNumber: "ALO-DM-908", displayOrder: 908, isDemo: true }
+  };
+
+  window.ALOULOU_PRODUCTS.forEach(product => {
+    Object.assign(product, articleMeta[product.id] || {});
+
+    if (product.id === "assorted-proximity-sensors" && Array.isArray(product.variants)) {
+      const variantArticles = {
+        "nc-green": "ALO-SN-003-NC",
+        "no-blue": "ALO-SN-003-NO",
+        "latch-red": "ALO-SN-003-LT"
+      };
+      product.variants.forEach(variant => {
+        variant.articleNumber = variantArticles[variant.id] || product.articleNumber;
+      });
+    }
+
+    if (product.id === "schneider-ic60n-breakers") {
+      product.articleOptions = [
+        { id: "1p-6a", articleNumber: "ALO-BR-001-1P06", label: "مفرد 1P - 6A", labelEn: "Single pole 1P - 6 A" },
+        { id: "2p-40a", articleNumber: "ALO-BR-001-2P40", label: "مزدوج 2P - 40A", labelEn: "Double pole 2P - 40 A" }
+      ];
+    }
+  });
+
+  window.ALOULOU_PRODUCTS.sort((a, b) =>
+    (a.displayOrder ?? 9999) - (b.displayOrder ?? 9999)
+  );
+})();

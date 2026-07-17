@@ -11,6 +11,7 @@
   const product = products.find(item => item.id === params.get("id")) || products[0];
   const root = document.querySelector("#productRoot");
   const toast = document.querySelector("#toast");
+  let selectedVariantId = product?.variants?.[0]?.id || "";
 
   function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>'"]/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[character]));
@@ -31,15 +32,19 @@
 
   function render() {
     if (!root || !product) return;
-    const gallery = Array.isArray(product.gallery) && product.gallery.length ? product.gallery : [product.image];
+    const variant = product.variants?.find(item => item.id === selectedVariantId) || null;
+    const gallery = variant ? [variant.image] : (Array.isArray(product.gallery) && product.gallery.length ? product.gallery : [product.image]);
     const name = pf("name");
     const category = pf("categoryLabel");
     const brand = pf("brand");
-    const description = pf("description");
+    const variantName = variant ? (I.isEnglish() ? variant.nameEn : variant.name) : "";
+    const currentModel = variant?.model || product.model;
+    const currentArticleNumber = variant?.articleNumber || product.articleNumber || "—";
+    const description = variant ? (I.isEnglish() ? (variant.descriptionEn || variant.description) : variant.description) : pf("description");
     const status = pf("statusLabel");
     const imageNote = pf("imageNote") || I.t("صورة توضيحية للمنتج");
     const disclaimer = pf("disclaimer") || I.t("تنبيه: يجب مراجعة الكتالوج الأصلي قبل اعتماد المواصفات فنيًا أو تجاريًا.");
-    const specs = pf("specs") || product.specs || [];
+    const specs = variant ? (I.isEnglish() ? (variant.specsEn || variant.specs) : variant.specs) : (pf("specs") || product.specs || []);
     const usages = pf("usages") || product.usages || [];
     const related = products.filter(item => item.id !== product.id).slice(0, 3);
     const secondaryName = I.isEnglish() ? "" : product.nameEn;
@@ -77,8 +82,16 @@
           ${secondaryName ? `<p class="en-name">${escapeHtml(secondaryName)}</p>` : ""}
           <div class="detail-identifiers">
             <div class="detail-code"><span>${escapeHtml(I.t("العلامة التجارية"))}</span><strong>${escapeHtml(brand)}</strong></div>
-            <div class="detail-code"><span>${escapeHtml(I.t("الموديل"))}</span><strong>${escapeHtml(I.t(product.model))}</strong></div>
+            <div class="detail-code"><span>${escapeHtml(I.t("الموديل"))}</span><strong>${escapeHtml(I.t(currentModel))}</strong></div>
+            <div class="detail-code"><span>${escapeHtml(I.isEnglish() ? "Article No." : "رقم الصنف")}</span><strong>${escapeHtml(currentArticleNumber)}</strong></div>
           </div>
+          ${product.variants?.length ? `
+            <label class="product-variant-selector" style="--variant-color:${escapeHtml(variant?.color || "#2d6a68")}">
+              <span>${I.isEnglish() ? "Select type" : "اختر النوع"}</span>
+              <select id="variantSelect">
+                ${product.variants.map(item => `<option value="${escapeHtml(item.id)}" ${item.id === selectedVariantId ? "selected" : ""}>${escapeHtml(I.isEnglish() ? item.nameEn : item.name)}</option>`).join("")}
+              </select>
+            </label>` : ""}
           <p class="detail-description">${escapeHtml(description)}</p>
           <div class="detail-highlights">
             <span>✓ ${escapeHtml(I.t(product.realProduct ? "صورة منتج فعلية" : "بيانات منظمة"))}</span>
@@ -86,7 +99,7 @@
             <span>✓ ${escapeHtml(I.t("عرض متجاوب"))}</span>
           </div>
           <div class="detail-actions">
-            <button class="primary-btn" data-cart-add="${product.id}" type="button">${escapeHtml(I.t("أضف إلى السلة"))} <span>+</span></button>
+            <button class="primary-btn" data-cart-add="${product.id}" ${variant ? `data-cart-variant="${escapeHtml(variant.id)}"` : ""} type="button">${escapeHtml(I.t("أضف إلى السلة"))} <span>+</span></button>
             <button class="secondary-btn" id="copyProduct" type="button">${escapeHtml(I.t("نسخ اسم المنتج"))}</button>
           </div>
           <p class="safety-note">${escapeHtml(disclaimer)}</p>
@@ -114,14 +127,19 @@
         <div class="mini-products">
           ${related.map(item => {
             const relatedName = I.product(item, "name");
-            return `<a href="product.html?id=${encodeURIComponent(item.id)}&v=30"><img src="${item.image}" alt=""><span><strong>${escapeHtml(relatedName)}</strong><small>${escapeHtml(I.t(item.model))}</small></span></a>`;
+            return `<a href="product.html?id=${encodeURIComponent(item.id)}&v=31"><img src="${item.image}" alt=""><span><strong>${escapeHtml(relatedName)}</strong><small>${escapeHtml(I.t(item.model))}</small><small>${escapeHtml(item.articleNumber || "")}</small></span></a>`;
           }).join("")}
         </div>
       </section>`;
 
     document.querySelector("#copyProduct")?.addEventListener("click", () => {
-      navigator.clipboard?.writeText(`${name} — ${I.t(product.model)}`)
+      navigator.clipboard?.writeText(`${name}${variantName ? ` - ${variantName}` : ""} — ${I.t(currentModel)} — ${currentArticleNumber}`)
         .then(() => showToast(I.t("تم نسخ اسم المنتج والموديل")));
+    });
+
+    document.querySelector("#variantSelect")?.addEventListener("change", event => {
+      selectedVariantId = event.target.value;
+      render();
     });
 
     document.querySelectorAll(".thumb-btn").forEach(button => {

@@ -20,12 +20,12 @@
       if (promptTitle) promptTitle.textContent = I.isEnglish() ? "Need help with this product?" : "تحتاج مساعدة بهذا المنتج؟";
       if (promptText) {
         promptText.textContent = I.isEnglish()
-          ? `Ask the Sales Department about ${productName}`
-          : `اسأل قسم المبيعات عن ${productName}`;
+          ? "Contact Sales for details, availability, and pricing"
+          : "تواصل مع قسم المبيعات للاستفسار عن التفاصيل والسعر";
       }
     } else {
       if (promptTitle) promptTitle.textContent = I.t("تحتاج مساعدة باختيار المنتج؟");
-      if (promptText) promptText.textContent = I.t("اسأل قسم المبيعات مباشرة");
+      if (promptText) promptText.textContent = I.t("قسم المبيعات جاهز لمساعدتك مباشرة");
     }
 
     const message = productName
@@ -52,14 +52,14 @@
 
   updateContent();
 
-  const promptSeen = sessionStorage.getItem("aloulouWhatsappPromptSeenV3") === "1";
+  const promptSeen = sessionStorage.getItem("aloulouWhatsappPromptSeenV4") === "1";
   if (promptSeen) {
     hidden = true;
     root.classList.add("prompt-hidden");
     prompt?.setAttribute("hidden", "");
   } else {
     window.setTimeout(() => root.classList.add("is-visible"), 700);
-    sessionStorage.setItem("aloulouWhatsappPromptSeenV3", "1");
+    sessionStorage.setItem("aloulouWhatsappPromptSeenV4", "1");
     window.setTimeout(hidePrompt, 7200);
   }
 

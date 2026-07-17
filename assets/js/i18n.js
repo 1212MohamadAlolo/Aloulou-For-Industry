@@ -216,6 +216,42 @@
 });
 
   Object.assign(TEXT_EN, {"اضغط هنا لمعرفة السعر":"Click here to check the price"});
+
+
+  Object.assign(TEXT_EN, {
+    "حساس شعاع ضوئي مزدوج": "Dual-Beam Photoelectric Sensor",
+    "خلية ضوئية لباب الكراج": "Photoelectric Sensor for Garage Doors",
+    "حساس NC - الأخضر": "NC Sensor - Green",
+    "حساس NO - الأزرق": "NO Sensor - Blue",
+    "حساس Latch - الأحمر": "Latch Sensor - Red",
+    "قاطع شنايدر مفرد ومزدوج": "Schneider Single and Double Pole Breakers",
+    "أكسس كود ببصمة وكرت ورمز": "Access Control Keypad with Fingerprint, Card, and PIN",
+    "جهاز اتصال لاسلكي مع قاعدة شحن": "Handheld Two-Way Radio with Charging Dock",
+    "مجموعة تحكم لاسلكية للطاقة والمولد": "Wireless Power and Generator Control Kit",
+    "صفحة 1 من 3": "Page 1 of 3",
+    "صفحة 2 من 3": "Page 2 of 3",
+    "صفحة 3 من 3": "Page 3 of 3",
+    "قسم المبيعات جاهز لمساعدتك مباشرة": "The Sales Department is ready to help you",
+    "تواصل مع قسم المبيعات للاستفسار عن التفاصيل والسعر": "Contact Sales for details, availability, and pricing"
+  });
+
+
+  Object.assign(TEXT_EN, {
+  "قبل المتابعة": "Before Continuing",
+  "مرحبًا بك في موقع علولو للصناعة": "Welcome to Aloulou for Industry",
+  "يرجى مراجعة الخيارات التالية. يمكنك استخدام الموقع بعد الموافقة على الشروط، أما إشعارات المنتجات والعروض فهي اختيارية.": "Please review the following options. You may use the site after accepting the terms. Product and offer notifications are optional.",
+  "أوافق على شروط الاستخدام وسياسة الخصوصية": "I agree to the Terms of Use and Privacy Policy",
+  "تشمل استخدام الموقع، سلة المشتريات، طلبات الأسعار، التواصل عبر WhatsApp، وحفظ تفضيلات الموقع على جهازي.": "This covers use of the site, shopping cart, quotation requests, WhatsApp contact, and storing site preferences on my device.",
+  "قراءة الشروط": "Read the Terms",
+  "سياسة الخصوصية": "Privacy Policy",
+  "أرغب بتلقي إشعارات المنتجات الجديدة والعروض": "I want to receive new-product and offer notifications",
+  "هذا الخيار اختياري. بعد الضغط على «متابعة» سيطلب المتصفح إذن الإشعارات الرسمي، ويمكنك الرفض أو الإلغاء لاحقًا.": "This option is optional. After pressing Continue, the browser will show its official notification permission prompt. You may refuse or disable it later.",
+  "متابعة": "Continue",
+  "دخول الموقع وحفظ اختياراتي": "Enter the site and save my choices",
+  "الموافقة على الشروط مطلوبة لاستخدام الموقع. الموافقة على الإشعارات ليست مطلوبة ويمكن تغييرها لاحقًا.": "Accepting the terms is required to use the site. Notification permission is optional and can be changed later.",
+  "إدارة الموافقات والإشعارات": "Manage Consent & Notifications",
+  "الجودة رقم 1 — The First": "Quality No. 1 — The First"
+});
   const ATTR_EN = {
   "علولو للصناعة": "Aloulou for Industry",
   "علولو للصناعة - الصفحة الرئيسية": "Aloulou for Industry — Home",

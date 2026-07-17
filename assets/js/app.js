@@ -38,12 +38,13 @@
     const category = pf(product, "categoryLabel");
     const short = pf(product, "short");
     const brand = pf(product, "brand");
+    const articleLabel = I.isEnglish() ? "Article No." : "رقم الصنف";
     const cartLabel = quantity
       ? (I.isEnglish() ? `In Cart: ${quantity}` : `في السلة: ${quantity}`)
       : I.t("أضف للسلة +");
     return `<article class="product-card">
       <div class="product-media">
-        <a href="product.html?id=${encodeURIComponent(product.id)}&v=30">
+        <a href="product.html?id=${encodeURIComponent(product.id)}&v=31">
           <img src="${product.image}" alt="${escapeHtml(name)}" loading="lazy">
         </a>
         <button class="favorite-btn ${favorite ? "is-active" : ""}" data-favorite="${product.id}" type="button" aria-label="${escapeHtml(I.t(favorite ? "إزالة من المفضلة" : "إضافة إلى المفضلة"))}">♡</button>
@@ -51,11 +52,12 @@
       </div>
       <div class="product-body">
         <div class="product-meta"><span>${escapeHtml(category)}</span><small>${escapeHtml(I.t(product.model))}</small></div>
-        <h3><a href="product.html?id=${encodeURIComponent(product.id)}&v=30">${escapeHtml(name)}</a></h3>
+        <h3><a href="product.html?id=${encodeURIComponent(product.id)}&v=31">${escapeHtml(name)}</a></h3>
         <p>${escapeHtml(short)}</p>
+        <div class="product-article"><span>${escapeHtml(articleLabel)}</span><b>${escapeHtml(product.articleNumber || "—")}</b></div>
         <div class="product-brand">${escapeHtml(brand)}</div>
         <div class="product-actions">
-          <a class="details-btn" href="product.html?id=${encodeURIComponent(product.id)}&v=30">${escapeHtml(I.t("التفاصيل"))}</a>
+          <a class="details-btn" href="product.html?id=${encodeURIComponent(product.id)}&v=31">${escapeHtml(I.t("التفاصيل"))}</a>
           <button class="add-quote-btn ${quantity ? "is-added" : ""}" data-cart-add="${product.id}" type="button">${escapeHtml(cartLabel)}</button>
         </div>
       </div>
@@ -67,7 +69,7 @@
     const filtered = products.filter(product => {
       const categoryMatch = state.category === "all" || product.category === state.category;
       const searchable = [
-        product.name, product.nameEn, product.model, product.brand, product.brandEn,
+        product.name, product.nameEn, product.model, product.articleNumber, product.brand, product.brandEn,
         product.categoryLabel, product.categoryLabelEn, product.short, product.shortEn,
         product.description, product.descriptionEn, ...(product.searchTerms || [])
       ].filter(Boolean).join(" ").toLowerCase();

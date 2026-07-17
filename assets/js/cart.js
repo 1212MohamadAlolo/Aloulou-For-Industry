@@ -37,7 +37,23 @@
     return String(value ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
   }
 
-  function getProduct(id) { return products.find(p => p.id === id); }
+  function getProduct(id) {
+    const [baseId, variantId] = String(id || "").split("::");
+    const base = products.find(p => p.id === baseId);
+    if (!base || !variantId) return base;
+    const variant = base.variants?.find(item => item.id === variantId);
+    if (!variant) return base;
+    return {
+      ...base,
+      id: `${baseId}::${variantId}`,
+      baseId,
+      image: variant.image || base.image,
+      model: variant.model || base.model,
+      articleNumber: variant.articleNumber || base.articleNumber,
+      name: `${base.name} - ${variant.name}`,
+      nameEn: `${base.nameEn} - ${variant.nameEn}`
+    };
+  }
   function getQuantity(id) { return Number(state.cart[id] || 0); }
   function getItems() {
     return Object.entries(state.cart)
@@ -169,6 +185,7 @@
           <div class="cart-item-copy">
             <strong>${escapeHtml(name)}</strong>
             <small>${escapeHtml(I.t(product.model))}</small>
+            <small>${escapeHtml(I.isEnglish() ? "Article No." : "رقم الصنف")}: ${escapeHtml(product.articleNumber || "—")}</small>
             <div class="cart-item-quantity">
               <button type="button" data-cart-minus="${product.id}" aria-label="${escapeHtml(I.t("إنقاص الكمية"))}">−</button>
               <b>${quantity}</b>
@@ -205,13 +222,14 @@
     document.body.classList.toggle("no-scroll", Boolean(document.querySelector(".cart-modal.is-open")));
   }
 
-  function openQuantity(id) {
-    const product = getProduct(id);
+  function openQuantity(id, variantId = "") {
+    const lineId = variantId ? `${id}::${variantId}` : id;
+    const product = getProduct(lineId);
     if (!product) return;
-    state.pendingProductId = id;
-    const current = getQuantity(id) || 1;
+    state.pendingProductId = lineId;
+    const current = getQuantity(lineId) || 1;
     const name = pf(product, "name");
-    document.querySelector("#quantityProduct").innerHTML = `<img src="${product.image}" alt=""><div><strong>${escapeHtml(name)}</strong><small>${escapeHtml(I.t(product.model))}</small></div>`;
+    document.querySelector("#quantityProduct").innerHTML = `<img src="${product.image}" alt=""><div><strong>${escapeHtml(name)}</strong><small>${escapeHtml(I.t(product.model))}</small><small>${escapeHtml(I.isEnglish() ? "Article No." : "رقم الصنف")}: ${escapeHtml(product.articleNumber || "—")}</small></div>`;
     document.querySelector("#quantityInput").value = current;
     setModalOpen(document.querySelector("#quantityModal"), true);
     setTimeout(() => document.querySelector("#quantityInput")?.select(), 80);
@@ -250,7 +268,7 @@
     const rows = items.map(({product, quantity}, index) => {
       const name = pf(product, "name");
       const secondary = english ? "" : (product.nameEn || "");
-      return `<tr><td>${index + 1}</td><td><div class="prod"><b>${escapeHtml(name)}</b>${secondary ? `<small>${escapeHtml(secondary)}</small>` : ""}<small>${escapeHtml(I.t(product.model || "غير محدد"))}</small></div></td><td>${quantity}</td></tr>`;
+      return `<tr><td>${index + 1}</td><td><div class="prod"><b>${escapeHtml(name)}</b>${secondary ? `<small>${escapeHtml(secondary)}</small>` : ""}<small>${escapeHtml(I.t(product.model || "غير محدد"))}</small><small>${escapeHtml(english ? "Article No." : "رقم الصنف")}: ${escapeHtml(product.articleNumber || "—")}</small></div></td><td>${quantity}</td></tr>`;
     }).join("");
 
     const labels = english ? {
@@ -413,7 +431,10 @@
 
         ctx.fillStyle = "#667773";
         ctx.font = `600 18px ${fontFamily}`;
-        ctx.fillText(String(I.t(product.model || "غير محدد")).slice(0, 28), 450, y + 68);
+        ctx.fillText(String(I.t(product.model || "غير محدد")).slice(0, 28), 450, y + 52);
+        ctx.fillStyle = "#2d6a68";
+        ctx.font = `700 15px ${fontFamily}`;
+        ctx.fillText(String(product.articleNumber || "—").slice(0, 30), 450, y + 82);
 
         ctx.textAlign = english ? "left" : "right";
         ctx.direction = english ? "ltr" : "rtl";
@@ -652,10 +673,10 @@
 
   function buildWhatsAppText(items, meta, customer) {
     if (I.isEnglish()) {
-      const lines = items.map((item, index) => `${index + 1}. ${pf(item.product, "name")} — Quantity: ${item.quantity}`);
+      const lines = items.map((item, index) => `${index + 1}. ${pf(item.product, "name")} — Article No.: ${item.product.articleNumber || "—"} — Quantity: ${item.quantity}`);
       return `Hello Sales Department, I am sending purchase order ${meta.number}.\n${customer.name ? `Name: ${customer.name}\n` : ""}${lines.join("\n")}\n${customer.notes ? `Notes: ${customer.notes}\n` : ""}The order invoice was generated from the Aloulou for Industry website.`;
     }
-    const lines = items.map((item, index) => `${index + 1}. ${item.product.name} — الكمية: ${item.quantity}`);
+    const lines = items.map((item, index) => `${index + 1}. ${item.product.name} — رقم الصنف: ${item.product.articleNumber || "—"} — الكمية: ${item.quantity}`);
     return `مرحبًا قسم المبيعات، أرسل طلب الشراء رقم ${meta.number}.\n${customer.name ? `الاسم: ${customer.name}\n` : ""}${lines.join("\n")}\n${customer.notes ? `ملاحظات: ${customer.notes}\n` : ""}تم إنشاء ملف فاتورة الطلب من موقع علولو للصناعة.`;
   }
 
@@ -764,7 +785,7 @@
 
   function bindEvents() {
     document.addEventListener("click", event => {
-      const add=event.target.closest("[data-cart-add]"); if(add){openQuantity(add.dataset.cartAdd);return;}
+      const add=event.target.closest("[data-cart-add]"); if(add){openQuantity(add.dataset.cartAdd, add.dataset.cartVariant || "");return;}
       if(event.target.closest("[data-cart-open]")){openCart(false);return;}
       if(event.target.closest("[data-cart-close]")){closeCart();return;}
       if(event.target.closest("[data-quantity-close]")){setModalOpen(document.querySelector("#quantityModal"),false);return;}

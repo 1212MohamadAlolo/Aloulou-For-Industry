@@ -88,13 +88,13 @@
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       if (reloaded) return;
       reloaded = true;
-      if (!sessionStorage.getItem("aloulou-sw-v30-reloaded")) {
-        sessionStorage.setItem("aloulou-sw-v30-reloaded", "1");
+      if (!sessionStorage.getItem("aloulou-sw-v31-reloaded")) {
+        sessionStorage.setItem("aloulou-sw-v31-reloaded", "1");
         location.reload();
       }
     });
     window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./service-worker.js?v=30.0.0", {scope:"./"})
+      navigator.serviceWorker.register("./service-worker.js?v=31.0.0", {scope:"./"})
         .then(registration => registration.update())
         .catch(error => console.warn("Service worker registration failed", error));
     });
